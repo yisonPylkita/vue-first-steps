@@ -1,13 +1,17 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
     <router-view/>
   </div>
 </template>
 
 <script>
+import MainPage from '@/components/MainPage'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    MainPage
+  }
 }
 </script>
 
