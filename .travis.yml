@@ -1,13 +1,22 @@
-language: node_js
-node_js: 6
 addons:
-  chrome: stable
-before_script:
-  - npm install
-  - npm install -g selenium-webdriver
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
-  - sleep 20
-  - google-chrome-stable --headless --disable-gpu http://localhost &
-  - sleep 20
+  apt:
+    packages:
+    - xvfb
+install:
+  - export DISPLAY=':99.0'
+  - Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
+  - nvm install
+  - npm install -g yarn xvfb-maybe
+  - yarn
+# script:
+#   - xvfb-maybe node_modules/.bin/karma start test/unit/karma.conf.js
+#   - yarn run pack && xvfb-maybe node_modules/.bin/mocha test/e2e
+# before_script:
+#   - npm install
+#   - npm install -g selenium-webdriver
+#   - "export DISPLAY=:99.0"
+#   - "sh -e /etc/init.d/xvfb start"
+#   - sleep 20
+#   - google-chrome-stable --headless --disable-gpu http://localhost &
+#   - sleep 20
 script: npm run build
