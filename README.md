@@ -2,6 +2,8 @@
 
 > A Vue.js project
 
+https://travis-ci.org/yisonPylkita/vue-first-steps.svg?branch=master
+
 ## Build Setup
 
 ``` bash
