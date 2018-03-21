@@ -2,7 +2,7 @@
 
 > A Vue.js project
 
-https://travis-ci.org/yisonPylkita/vue-first-steps.svg?branch=master
+[![Build Status](https://travis-ci.org/yisonPylkita/vue-first-steps.svg)](https://travis-ci.org/yisonPylkita/vue-first-steps)
 
 ## Build Setup
 
